@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="on()">click</button>
+        <p id="demo"></p>
+
+
+        <script>
+            var a=(function(){
+                var counter=0;
+                return function(){
+                    counter +=1;
+                    return counter;
+                }
+            }) ();
+            function on(){
+                document.getElementById('demo').innerHTML=a();
+            }
+        </script>
+    </body>
+</html>
